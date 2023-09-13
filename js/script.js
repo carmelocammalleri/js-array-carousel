@@ -25,5 +25,12 @@ for(let i=0; i< listImages.length; i++){
 const itemHide = document.getElementsByClassName('item');
 itemHide[counter].classList.remove('hide');
 
+btnDown.addEventListener('click', function (){
+  itemHide[counter].classList.add('hide');
 
+  counter++;
 
+  itemHide[counter].classList.remove('hide');
+  
+
+})
