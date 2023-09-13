@@ -28,7 +28,6 @@ for(let i=0; i< listImages.length; i++){
 }
 
 //6.
-btnUp.classList.add('hide');
 const itemHide = document.getElementsByClassName('item');
 itemHide[counter].classList.remove('hide');
 
@@ -36,28 +35,23 @@ btnDown.addEventListener('click', function (){
   itemHide[counter].classList.add('hide');
 
   counter++;
-
-  itemHide[counter].classList.remove('hide');
-  if(counter === itemHide.length - 1){
-    btnDown.classList.add('hide');
+  if(counter === itemHide.length){
+    counter=0
   }
 
-  btnUp.classList.remove('hide')
-
+  itemHide[counter].classList.remove('hide');
 })
 
 btnUp.addEventListener('click', function(){
   itemHide[counter].classList.add('hide');
 
+  if(counter === 0){
+    counter= itemHide.length
+  }
   counter--;
-
+  
   itemHide[counter].classList.remove('hide');
 
-  btnDown.classList.remove('hide')
-
-  if(counter === 0){
-    btnUp.classList.add('hide');
-  }
 })
 
 // 7.condizioni bonus
