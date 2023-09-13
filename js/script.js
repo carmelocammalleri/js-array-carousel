@@ -42,5 +42,15 @@ btnDown.addEventListener('click', function (){
 })
 
 btnUp.addEventListener('click', function(){
-  
+  itemHide[counter].classList.add('hide');
+
+  counter--;
+
+  itemHide[counter].classList.remove('hide');
+
+  btnDown.classList.remove('hide')
+
+  if(counter === 0){
+    btnUp.classList.add('hide');
+  }
 })
