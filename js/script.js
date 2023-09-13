@@ -4,6 +4,9 @@ const imageWrapper = document.querySelector('.image-wrap');
 const btnUp = document.querySelector('.arrow-up');
 const btnDown = document.querySelector('.arrow-down');
 
+// bonus
+const thumbNail = document.querySelector('.thumb')
+
 // 3. creare array
 const listImages = [
   'img/01.webp',
@@ -35,12 +38,12 @@ btnDown.addEventListener('click', function (){
   counter++;
 
   itemHide[counter].classList.remove('hide');
-
-  btnUp.classList.remove('hide')
-
   if(counter === itemHide.length - 1){
     btnDown.classList.add('hide');
   }
+
+  btnUp.classList.remove('hide')
+
 })
 
 btnUp.addEventListener('click', function(){
@@ -58,3 +61,10 @@ btnUp.addEventListener('click', function(){
 })
 
 // 7.condizioni bonus
+for(let i=0; i< listImages.length; i++){
+  const image = listImages[i];
+
+  //8. stampa codice
+  thumbNail.innerHTML += `<div class="thumb-img"><img src="${image}" class=" item-thumb"></div>`
+}
+
