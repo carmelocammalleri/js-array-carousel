@@ -21,6 +21,7 @@
 
 .slide {
   height: 100%;
+  position: relative;
 }
 
 .hide {
