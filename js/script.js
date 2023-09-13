@@ -18,8 +18,8 @@ let counter = 0;
 
 //4. inserire img dentro html
 for(let i=0; i< listImages.length; i++){
-  const image = listImages[1];
-  imageWrapper.innerHTML = `<img src="${image}" class= " item hide">`;
+  const image = listImages[i];
+  imageWrapper.innerHTML += `<img src="${image}" class= " item hide">`;
 }
 
 const itemHide = document.getElementsByClassName('item');
