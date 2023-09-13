@@ -19,6 +19,8 @@ let counter = 0;
 //4. inserire img dentro html
 for(let i=0; i< listImages.length; i++){
   const image = listImages[i];
+
+  //8. stampa codice
   imageWrapper.innerHTML += `<img src="${image}" class= " item hide">`;
 }
 
@@ -54,3 +56,5 @@ btnUp.addEventListener('click', function(){
     btnUp.classList.add('hide');
   }
 })
+
+// 7.condizioni bonus
