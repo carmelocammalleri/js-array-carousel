@@ -13,7 +13,7 @@ const listImages = [
   'img/05.webp'
 ]
 
-//6 creare contatore
+//5. creare contatore
 let counter = 0;
 
 //4. inserire img dentro html
@@ -22,6 +22,8 @@ for(let i=0; i< listImages.length; i++){
   imageWrapper.innerHTML += `<img src="${image}" class= " item hide">`;
 }
 
+//6.
+btnUp.classList.add('hide');
 const itemHide = document.getElementsByClassName('item');
 itemHide[counter].classList.remove('hide');
 
@@ -31,6 +33,14 @@ btnDown.addEventListener('click', function (){
   counter++;
 
   itemHide[counter].classList.remove('hide');
-  
 
+  btnUp.classList.remove('hide')
+
+  if(counter === itemHide.length - 1){
+    btnDown.classList.add('hide');
+  }
+})
+
+btnUp.addEventListener('click', function(){
+  
 })
